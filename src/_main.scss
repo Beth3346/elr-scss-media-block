@@ -39,10 +39,12 @@
   }
 
   figure {
-    // overflow: hidden;
-    margin-top: 4px;
     margin-right: 24px;
     flex-basis: 200px;
+
+    @if ($vertical-align == top) {
+      margin-top: 4px;
+    }
 
     img {
       @if ($border-color != transparent) {
@@ -68,11 +70,13 @@
     font-weight: 900;
   }
 
-  .media-block-content {
-    margin-bottom: 16px;
-  }
+  // .media-block-content {
+  //   margin-bottom: 16px;
+  // }
 
   p {
     font-size: 16px;
+    margin: 8px 0;
+    padding: 0;
   }
 }
