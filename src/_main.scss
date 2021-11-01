@@ -1,1 +1,5 @@
-@import 'elr-scss-functions/main';
+@import "node_modules/elr-scss-functions/src/main";
+
+.test {
+  font-size: to-rems(16px);
+}
