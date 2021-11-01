@@ -1,5 +1,27 @@
 @import "src/main";
 
+.demo-content {
+  background-color: #eee;
+  padding: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.media-block:not(:last-child),
+.media-block-noborder:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .media-block {
-  background-color: #fff;
+  @include elr-media-block;
+}
+
+.media-block-noborder {
+  @include elr-media-block(
+    $config: (
+      border-color: transparent,
+    )
+  );
 }

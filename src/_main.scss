@@ -1,5 +1,68 @@
 @import "node_modules/elr-scss-functions/src/main";
 
-.test {
-  font-size: to-rems(16px);
+@mixin elr-media-block($config: ()) {
+  $config: extend(
+    (
+      border-color: #ccc,
+      background-color: #fff,
+      border-radius: 5px,
+      vertical-align: top,
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+    ),
+    $config
+  );
+
+  $border-color: map-get($config, border-color);
+  $background-color: map-get($config, background-color);
+  $border-radius: map-get($config, border-radius);
+  $vertical-align: map-get($config, vertical-align);
+  $box-shadow: map-get($config, box-shadow);
+
+  @if ($border-color != transparent) {
+    border: 1px solid $border-color;
+  }
+
+  border-radius: $border-radius;
+  background-color: $background-color;
+  padding: 16px;
+  display: flex;
+  box-shadow: $box-shadow;
+
+  figure {
+    // overflow: hidden;
+    margin-top: 4px;
+    margin-right: 24px;
+    flex-basis: 200px;
+
+    img {
+      @if ($border-color != transparent) {
+        border: 1px solid $border-color;
+      }
+      border-radius: $border-radius;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .heading {
+    @if ($border-color != transparent) {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    } @else {
+      margin-bottom: 8px;
+    }
+
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .media-block-content {
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
