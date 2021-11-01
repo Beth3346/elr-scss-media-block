@@ -25,8 +25,18 @@
   border-radius: $border-radius;
   background-color: $background-color;
   padding: 16px;
-  display: flex;
   box-shadow: $box-shadow;
+  display: flex;
+
+  @if ($vertical-align == top) {
+    align-items: flex-start;
+  } @else if ($vertical-align == center) {
+    align-items: center;
+  } @else if ($vertical-align == bottom) {
+    align-items: flex-end;
+  } @else {
+    align-items: flex-start;
+  }
 
   figure {
     // overflow: hidden;

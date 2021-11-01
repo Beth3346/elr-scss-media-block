@@ -22,6 +22,7 @@
   @include elr-media-block(
     $config: (
       border-color: transparent,
+      vertical-align: center,
     )
   );
 }
