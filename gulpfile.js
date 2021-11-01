@@ -1,5 +1,3 @@
-const notify = require("gulp-notify");
-const exit = require("process");
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
@@ -29,7 +27,7 @@ function copyImages() {
     .pipe(gulp.dest(paths.images));
 }
 
-function processStyles(done) {
+function processStyles() {
   return gulp
     .src(["public/*.scss"])
     .pipe(plumber())
@@ -54,7 +52,7 @@ function processStyles(done) {
 gulp.task("default", done => {
   copyImages();
   copyHtml();
-  const styles = processStyles(done);
+  processStyles();
   // console.log({ styles });
   done();
 });
