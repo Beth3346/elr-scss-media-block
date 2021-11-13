@@ -14,6 +14,26 @@ npm install elr-scss-media-block --save
 yarn add elr-scss-media-block
 ```
 
+## Documentation
+
+```scss
+.media-block {
+  @include elr-media-block;
+}
+
+.media-block-noborder {
+  @include elr-media-block(
+    $config: (
+      border-color: transparent,
+      vertical-align: center,
+      background-color: #eee,
+      border-radius: 0,
+      box-shadow: none,
+    )
+  );
+}
+```
+
 ## License
 
 SEE LICENSE IN LICENSE.md
