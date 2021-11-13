@@ -20,7 +20,9 @@ yarn add elr-scss-media-block
 .media-block {
   @include elr-media-block;
 }
+```
 
+```scss
 .media-block-noborder {
   @include elr-media-block(
     $config: (
