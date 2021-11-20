@@ -40,11 +40,12 @@
 
   figure {
     margin-right: 24px;
+    margin-top: 0;
     flex-basis: 200px;
 
-    @if ($vertical-align == top) {
-      margin-top: 4px;
-    }
+    // @if ($vertical-align == top) {
+    //   margin-top: 4px;
+    // }
 
     img {
       @if ($border-color != transparent) {
@@ -58,6 +59,8 @@
   }
 
   .heading {
+    padding: 0;
+
     @if ($border-color != transparent) {
       border-bottom: 1px solid $border-color;
       padding-bottom: 4px;
@@ -66,6 +69,7 @@
       margin-bottom: 8px;
     }
 
+    margin-top: 0;
     font-size: 20px;
     font-weight: 900;
   }
